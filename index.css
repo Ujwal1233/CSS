@@ -1,5 +1,5 @@
 body{
-    background-color: aqua;
+    background-color:wheat;
 }
 h1{
     color: yellowgreen;
@@ -11,6 +11,6 @@ p{
     font-family: monospace;
     font-size:large;
 }
-<h1 style="color.red">
+<h2 style="color.red">
     Welcome to CSS class
-    </h1>
+    </h2>
