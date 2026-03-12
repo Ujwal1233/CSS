@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+.one:active{
+    color:brown;
+    border: 5px dashed red;
+}
+.two:active{
+    color:blue;
+    border: 5px dashed green;
+}
+.three:active{
+    color:purple;
+    border: 5px dashed orange;
+}
+div{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+}
+div:active{
+    background-color: yellow;
+    border: 5px dashed pink;
+}
+.aref:visited{
+    color:aqua
+}
+.four:focus{
+    color:cyan;
+    border: 5px dashed gray;
+    outline: none;
+}
+  </style>
+</head>
+<body>
+    <input type="text" class="four" placeholder="Enter text">
+    <a href="https://www.twitter.com" class="aref">
+        twitter
+    </a>
+<a href="https://www.facebook.com" class="one">
+    facebook
+</a>
+<button class="two">Click me</button>
+<input type="text" class="three" placeholder="Enter text">
+<div></div>
+</body>
+</html>
