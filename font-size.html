@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Font Size Units Example</title>
+
+<style>
+
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+
+.px-text{
+    font-size: 20px;
+    color: red;
+}
+
+
+.parent{
+    font-size: 20px;
+}
+
+.percent-text{
+    font-size: 120%;
+    color: blue;
+}
+
+.em-parent{
+    font-size: 20px;
+}
+
+.em-text{
+    font-size: 2em;
+    color: green;
+}
+
+
+.rem-text{
+    font-size: 2rem;
+    color: purple;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2 class="px-text">This text uses 20px</h2>
+
+
+<div class="parent">
+<p class="percent-text">This text uses 120% of parent size</p>
+</div>
+
+<div class="em-parent">
+<p class="em-text">This text uses 2em (relative to parent)</p>
+</div>
+
+<p class="rem-text">This text uses 2rem (relative to root html)</p>
+
+</body>
+</html>
