@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Profile Card</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#e6e6e6;
+}
+
+/* Card */
+
+.card{
+width:320px;
+background:#ffffff;
+border-radius:20px;
+padding:30px 20px;
+text-align:center;
+box-shadow:0 15px 30px rgba(0,0,0,0.1);
+position:relative;
+}
+
+/* Top Icons */
+
+.top-icons{
+position:absolute;
+top:15px;
+left:15px;
+right:15px;
+display:flex;
+justify-content:space-between;
+font-size:18px;
+color:#777;
+cursor:pointer;
+}
+
+/* Profile Image */
+
+.profile-img{
+width:120px;
+height:120px;
+margin:30px auto 15px;
+border-radius:50%;
+background:#cfe2f3;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+.profile-img img{
+width:70px;
+}
+
+/* Name */
+
+h2{
+margin:10px 0;
+font-size:24px;
+}
+
+/* Description */
+
+p{
+font-size:14px;
+color:#444;
+line-height:1.5;
+margin-bottom:20px;
+padding:0 10px;
+}
+
+/* Social Icons */
+
+.social{
+display:flex;
+justify-content:center;
+gap:30px;
+font-size:22px;
+color:#777;
+cursor:pointer;
+}
+
+.social i:hover{
+color:#000;
+}
+
+</style>
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="top-icons">
+<i class="fas fa-arrow-left"></i>
+<i class="fas fa-ellipsis-vertical"></i>
+</div>
+
+<div class="profile-img">
+<img src="Ujwal.jpg.jpeg">
+</div>
+
+<h2>Ujwal D</h2>
+
+<p>
+Python Full Stack Intern
+</p>
+<div class="social">
+<i class="https://share.google/HgGap0hSqP6McPiIe"></i>
+<i class="https://www.linkedin.com/in/ujwal-d-2023a8311?"></i>
+<i class="https://www.instagram.com/_ujwal_23?igsh=MXRrNmp4YWZsZHo1ag"></i>
+</div>
+
+</div>
+
+</body>
+</html>
