@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: monospace;
+        }
+        body{
+            background-image: url(https://wallpaperaccess.com/full/9309805.jpg);
+        }
+        header,footer{
+            background-color: red;
+            color: rgb(246, 203, 95);
+            text-align: center;
+            width: 100%;
+            height: 70px;
+            padding: 10px;
+        }
+        h1{
+            text-decoration: 0px 0px 6px white;
+        }
+        .child{
+            width: 300px;
+            box-shadow: 0px 0px 10px black;
+            border-radius: 10px;
+            padding: 8px;
+            text-align: center;
+            margin: 50px auto;
+            background-color: aqua;
+            background-image: url(https://tse3.mm.bing.net/th/id/OIP.ylZ4dOEOOH5aCI_vycKcXwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3);
+        }
+        img{
+            height: 200px;
+            width: 200px;
+        }
+        p{
+            text-align: justify;
+            font-size: larger;
+            padding: 5px;
+        }
+        h2{
+            color: blue;
+            font-size: xx-large;
+
+        }
+        h3{
+            color: black;
+        }
+        button{
+            height: 50px;
+            width: 120px;
+            color: aqua;
+            background-color: blue;
+            border: none;
+            border-radius: 10px;
+        }
+        button:active{
+            border: 5px solid black;
+            background-color:  rgb(246, 203, 95);
+            color: red;
+        }
+        .parent{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .child1{
+            width: 300px;
+            box-shadow: 0px 0px 10px black;
+            border-radius: 10px;
+            padding: 8px;
+            text-align: center;
+            margin: 50px auto;
+            background-color: aqua;
+            background-image: url(https://th.bing.com/th/id/OIP.rEdk5CpdzROWWOE65ytZWwHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3);
+        }
+        .child2{
+             width: 300px;
+            box-shadow: 0px 0px 10px black;
+            border-radius: 10px;
+            padding: 8px;
+            text-align: center;
+            margin: 50px auto;
+            background-color: aqua;
+            background-image: url(https://st3.cricketcountry.com/wp-content/uploads/2018/12/MI-1.jpg);
+        }
+        .child3{
+            width: 300px;
+            box-shadow: 0px 0px 10px black;
+            border-radius: 10px;
+            padding: 8px;
+            text-align: center;
+            margin: 50px auto;
+            background-color: aqua;
+            background-image: url(https://media.crictracker.com/media/attachments/2022/02/Sunrisers-Hyderabad-logo.jpg);
+        }
+        .child4{
+            width: 300px;
+            box-shadow: 0px 0px 10px black;
+            border-radius: 10px;
+            padding: 8px;
+            text-align: center;
+            margin: 50px auto;
+            background-color: aqua;
+            background-image: url(https://th.bing.com/th/id/R.7db184de3b56b32685376d7d32fec364?rik=2ZQXU65WHFkdlA&riu=http%3a%2f%2fassets.designhill.com%2fdesign-blog%2fwp-content%2fuploads%2f2025%2f03%2f9-4.jpg&ehk=xt6fBgnYHIegsm8SoYMd4LZb%2bPn4%2bSuEuaxCL9viji0%3d&risl=&pid=ImgRaw&r=0);
+        }
+        .child5{
+            width: 300px;
+            box-shadow: 0px 0px 10px black;
+            border-radius: 10px;
+            padding: 8px;
+            text-align: center;
+            margin: 50px auto;
+            background-color: aqua;
+            background-image: url(https://wallpapercave.com/wp/wp7548624.jpg);
+        }
+        .child6{
+            width: 300px;
+            box-shadow: 0px 0px 10px black;
+            border-radius: 10px;
+            padding: 8px;
+            text-align: center;
+            margin: 50px auto;
+            background-color: aqua;
+            background-image: url(https://i0.wp.com/www.inningsbreak.com/wp-content/uploads/2023/03/Gujarat-Titans-Logo.png?resize=678%2C381&ssl=1);
+        }
+        .child7{
+              width: 300px;
+            box-shadow: 0px 0px 10px black;
+            border-radius: 10px;
+            padding: 8px;
+            text-align: center;
+            margin: 50px auto;
+            background-color: aqua;
+            background-image: url(https://tse4.mm.bing.net/th/id/OIP.63DxeElPq5VU7aVRFKJS-wHaHX?rs=1&pid=ImgDetMain&o=7&rm=3);
+        }
+        .child8{
+               width: 300px;
+            box-shadow: 0px 0px 10px black;
+            border-radius: 10px;
+            padding: 8px;
+            text-align: center;
+            margin: 50px auto;
+            background-color: aqua;
+            background-image: url(https://static.toiimg.com/thumb/imgsize-23456,msid-108635545,width-600,resizemode-4/108635545.jpg);
+        }
+        .child9{
+             width: 300px;
+            box-shadow: 0px 0px 10px black;
+            border-radius: 10px;
+            padding: 8px;
+            text-align: center;
+            margin: 50px auto;
+            background-color: aqua;
+            background-image: url(https://toppng.com/uploads/preview/kkr-squad-ipl-kolkata-knight-riders-logo-11562993217o9jojr35hy.png); 
+        }
+    </style>
+</head>
+<body>
+    <header>
+<h1>Indian Premier League Captains 2026</h1>
+    </header>
+    <main>
+        <div class="parent">
+            <div class="child">
+                <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/102.png">
+                <h2>Ruturaj Gaikwad</h2>
+                <h3>CSK</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis velit enim consectetur cupiditate repellat soluta illum natus dolor explicabo ratione doloremque, cumque omnis adipisci officia nostrum, labore, magnam consequatur nemo.</p>
+                <button>load more</button>
+            </div>
+        <div class="child1">
+                <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/597.png">
+                <h2>Rajat Patidar</h2>
+                <h3>RCB</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis velit enim consectetur cupiditate repellat soluta illum natus dolor explicabo ratione doloremque, cumque omnis adipisci officia nostrum, labore, magnam consequatur nemo.</p>
+                <button>load more</button>
+            </div>
+        <div class="child2">
+                <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/54.png">
+                <h2>Hardik Pandya</h2>
+                <h3>MI</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis velit enim consectetur cupiditate repellat soluta illum natus dolor explicabo ratione doloremque, cumque omnis adipisci officia nostrum, labore, magnam consequatur nemo.</p>
+                <button>load more</button>
+            </div>
+        <div class="child3">
+                <img src="https://documents.iplt20.com/ipl/IPLHeadshot2025/164.png">
+                <h2>Ishan Kishan</h2>
+                <h3>SRH</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis velit enim consectetur cupiditate repellat soluta illum natus dolor explicabo ratione doloremque, cumque omnis adipisci officia nostrum, labore, magnam consequatur nemo.</p>
+                <button>load more</button>
+            </div>
+        <div class="child4">
+                <img src="https://documents.iplt20.com/ipl/IPLHeadshot2025/18.png">
+                <h2>Rishabh Pant</h2>
+                <h3>LSG</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis velit enim consectetur cupiditate repellat soluta illum natus dolor explicabo ratione doloremque, cumque omnis adipisci officia nostrum, labore, magnam consequatur nemo.</p>
+                <button>load more</button>
+            </div>
+        <div class="child5">
+                <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/110.png">
+                <h2>Axar Patel</h2>
+                <h3>DC</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis velit enim consectetur cupiditate repellat soluta illum natus dolor explicabo ratione doloremque, cumque omnis adipisci officia nostrum, labore, magnam consequatur nemo.</p>
+                <button>load more</button>
+            </div>
+        <div class="child6">
+                <img src="https://documents.iplt20.com/ipl/IPLHeadshot2023/62.png">
+                <h2>Shubman Gill</h2>
+                <h3>GT</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis velit enim consectetur cupiditate repellat soluta illum natus dolor explicabo ratione doloremque, cumque omnis adipisci officia nostrum, labore, magnam consequatur nemo.</p>
+                <button>load more</button>
+            </div>
+        <div class="child7">
+                <img src="https://documents.iplt20.com/ipl/IPLHeadshot2025/12.png">
+                <h2>Shreyas Iyer</h2>
+                <h3>PK</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis velit enim consectetur cupiditate repellat soluta illum natus dolor explicabo ratione doloremque, cumque omnis adipisci officia nostrum, labore, magnam consequatur nemo.</p>
+                <button>load more</button>
+            </div>
+        <div class="child8">
+                <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/189.png">
+                <h2>Riran Parag</h2>
+                <h3>RR</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis velit enim consectetur cupiditate repellat soluta illum natus dolor explicabo ratione doloremque, cumque omnis adipisci officia nostrum, labore, magnam consequatur nemo.</p>
+                <button>load more</button>
+            </div>
+        <div class="child9">
+                <img src="https://documents.iplt20.com/ipl/IPLHeadshot2025/44.png">
+                <h2>Ajinkya Rahane</h2>
+                <h3>KKR</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis velit enim consectetur cupiditate repellat soluta illum natus dolor explicabo ratione doloremque, cumque omnis adipisci officia nostrum, labore, magnam consequatur nemo.</p>
+                <button>load more</button>
+            </div>
+       
+        
+    </main>
+    <footer>
+<h1>&copy; copy rights 2026</h1>
+    </footer>
+</body>
+</html>
