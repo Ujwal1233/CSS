@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        /* Colorful Gradient Background */
+        body {
+background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 30s ease infinite;
+        }
+@keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        body {
+            will-change: background-position;
+            transform: translateZ(0);
+        }
+        /* Navigation */
+nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            will-change: transform;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            position: relative;
+        }
+        nav a:hover {
+            color: #e73c7e;
+            text-shadow: 0 0 10px rgba(231, 60, 126, 0.5);
+        }
+        nav .login-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ee7752);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            margin-left: 1rem;
+        }
+        /* Sections */
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 20px 40px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            animation: textGlow 2s ease-in-out infinite alternate;
+        }
+        @keyframes textGlow {
+            from { filter: drop-shadow(0 0 10px rgba(255,107,107,0.5)); }
+            to { filter: drop-shadow(0 0 20px rgba(78,205,196,0.5)); }
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2rem;
+        }
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(45deg, #ff6b6b, #ee7752);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin: 0.5rem;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        .btn-secondary {
+            background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+        }
+        /* Product Cards */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin-top: 3rem;
+        }
+.product-card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.4s;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            will-change: transform;
+            transform: translateZ(0);
+        }
+.product-card:hover {
+            transform: translateY(-10px) translateZ(0);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+        }
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+        }
+        .service {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        /* Contact Form */
+        .contact-form {
+            background: rgba(255,255,255,0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #e73c7e;
+        }
+        /* Login/Signup Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 10% auto;
+            padding: 3rem;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 400px;
+            color: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            animation: modalSlide 0.5s ease-out;
+        }
+        @keyframes modalSlide {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: white;
+        }
+        .form-group input[type="password"] {
+            font-family: monospace;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            nav ul { flex-direction: column; align-items: center; }
+            nav a { margin: 0.5rem 0; }
+        }
+        /* Scroll Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        #home {
+            animation: fadeInUp 1s ease-out;
+            will-change: opacity, transform;
+        }
+        /* Other sections no longer have heavy animation to improve perf */
+        /* Feedback slider */
+        .feedback-slider {
+            max-width: 800px;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        .slide.active {
+            display: block;
+            animation: slideIn 0.5s ease-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" class="login-btn" onclick="openModal('login')">Login/Signup</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to Our Colorful World</h1>
+        <p>Discover amazing products with stunning design and premium quality. Your satisfaction is our priority!</p>
+        <a href="#products" class="btn">Explore Products</a>
+        <a href="#services" class="btn btn-secondary">Our Services</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="background: rgba(255,255,255,0.1);">
+        <h2>About Us</h2>
+        <p>We are a passionate team dedicated to creating innovative products that make life easier and more colorful. With years of experience, we deliver excellence in every project.</p>
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" alt="Team" style="max-width: 600px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); margin-top: 2rem;">
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We offer a wide range of services tailored to meet your needs</p>
+        <div class="services-grid">
+            <div class="service">
+                <h3>🎨 Web Design</h3>
+                <p>Stunning, responsive websites with modern design</p>
+            </div>
+            <div class="service">
+                <h3>🚀 Development</h3>
+                <p>Fast, secure, and scalable web applications</p>
+            </div>
+            <div class="service">
+                <h3>📱 Mobile Apps</h3>
+                <p>Native and cross-platform mobile solutions</p>
+            </div>
+            <div class="service">
+                <h3>💎 Consulting</h3>
+                <p>Expert advice for your digital transformation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" style="background: rgba(255,255,255,0.1);">
+        <h2>Our Products</h2>
+        <p>Premium quality products designed with love and care</p>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Product 1">
+                <h3>Premium Laptop</h3>
+                <p>High-performance laptop for professionals</p>
+                <a href="#" class="btn">$999</a>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Product 2">
+                <h3>Smart Watch</h3>
+                <p>Advanced health tracking smartwatch</p>
+                <a href="#" class="btn">$299</a>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Product 3">
+                <h3>Wireless Headphones</h3>
+                <p>Premium sound quality headphones</p>
+                <a href="#" class="btn">$199</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback">
+        <h2>Customer Feedback</h2>
+        <p>Don't just take our word for it</p>
+        <div class="feedback-slider">
+            <div class="slide active">
+                <p>"⭐⭐⭐⭐⭐ Amazing products and excellent service! Highly recommended!"</p>
+                <h4>- Sarah Johnson</h4>
+            </div>
+            <div class="slide">
+                <p>"⭐⭐⭐⭐⭐ The quality exceeded my expectations. Will buy again!"</p>
+                <h4>- Mike Chen</h4>
+            </div>
+            <div class="slide">
+                <p>"⭐⭐⭐⭐⭐ Best online shopping experience ever!"</p>
+                <h4>- Emily Davis</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background: rgba(255,255,255,0.1);">
+        <h2>Get In Touch</h2>
+        <p>Ready to start your project? Let's talk!</p>
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Login/Signup Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&amp;times;</span>
+            <h2 id="modalTitle">Login</h2>
+            <form id="authForm">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+            <p style="margin-top: 1rem;">Don't have account? <a href="#" onclick="switchModal('signup')" style="color: #4ecdc4;">Sign up</a></p>
+            <p>Have account? <a href="#" onclick="switchModal('login')" style="color: #4ecdc4;">Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Modal functions
+        function openModal(type) {
+            const modal = document.getElementById('authModal');
+            if (!modal) return;
+            modal.style.display = 'block';
+            switchModal(type);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('authModal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        function switchModal(type) {
+            const title = document.getElementById('modalTitle');
+            const form = document.getElementById('authForm');
+            if (!title || !form) return;
+            
+            const switchText1 = document.querySelector('#authModal p:nth-child(4)');
+            const switchText2 = document.querySelector('#authModal p:nth-child(5)');
+            
+            if (type === 'login') {
+                title.textContent = 'Login';
+                form.querySelector('button').textContent = 'Login';
+            } else {
+                title.textContent = 'Sign Up';
+                form.querySelector('button').textContent = 'Sign Up';
+            }
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('authModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Form submission (demo)
+        document.getElementById('authForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Demo: Account created/Logged in successfully! (This is a demo)');
+            closeModal();
+        });
+
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent.');
+        });
+
+        // Feedback slider with requestAnimationFrame for smooth perf
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        let sliderRunning = true;
+        
+        function nextSlide() {
+            if (!sliderRunning) return;
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+            requestAnimationFrame(() => setTimeout(nextSlide, 5000));
+        }
+        
+        // Pause on tab hidden
+        document.addEventListener('visibilitychange', () => {
+            sliderRunning = !document.hidden;
+            if (sliderRunning) nextSlide();
+        });
+        
+        nextSlide();
+    </script>
+
+</body>
+</html>
