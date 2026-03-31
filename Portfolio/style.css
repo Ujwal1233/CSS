@@ -132,3 +132,270 @@ a{
     background:#f3dfb3;
     border-radius: 10px;
 }
+
+.heading{
+  text-align: center;
+  font-size: 42px;
+
+}
+
+.skills-section{
+  padding-top: 50px;
+}
+
+.skills-grid{
+  display: grid;
+  grid-template-columns: 380px 380px 380px 380px;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+ 
+  
+}
+
+.skills-card{
+    margin-left: 40px;
+  min-height: 110px;
+  width: 80%;
+  background: #f1eadf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  color: #59493a;
+  border: 1px solid #af8f58;
+  font-size: 16px;
+   border-radius: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.skills-card:hover{
+  transform: translateY(-6px);
+  background: #c0ae90;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  min-height: 100px;
+}
+
+.card{
+    background: #eadfcb;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+h3{
+    color: #2f2a24;
+    padding: 14px;
+}
+
+p{
+    color: #2f2a24;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+button{
+    background: #f3dfb3;
+    color: #2f2a24;
+    border: none;
+    padding: 10px 16px;
+}
+.project-grid{
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap:20px;
+    justify-content: center;
+}
+
+.project-box{
+    height:180px;
+    border:1px solid #f3dfb3;
+    border-radius: 10px;
+}
+
+.project-box img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0px 0px 0px;
+    border-radius: 10px;
+}
+
+.project-box:hover{
+    transform: scale(1.11);
+}
+
+
+.project-section{
+    padding: 40px;
+}
+
+.content{
+    text-align: center;
+    padding: 14px;
+}
+
+.experience-section{
+    padding: 50px 60px 30px;
+}
+
+.experience-list{
+    display:flex;
+    position: relative;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.line{
+    position: relative;
+    padding: 60px;
+}
+
+.timeline{
+    position: relative;
+    width: 3px;
+    height: 90px;
+    background:#2f2a24;
+    top: -30px;
+    left: 10px;
+}
+
+.year{
+    height: fit-content;
+    background: #f1eadf;
+    color: #342d26;
+    font-size: 15px;
+    text-align: center;
+    border: 2px solid #af8f58;
+    position: relative;
+    padding: 7px 8px;
+}
+
+.experience-content h3{
+    margin-bottom: 8px;
+    font-size: 25px;
+    color: #40372e;
+}
+
+.experience-content p{
+    color: #40372e;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+.experience-section{
+    padding: 30px 60px 10px;
+}
+.experience-list{
+    display: flex;
+    gap:18px;
+    margin-top:25px;
+    position: relative;
+}
+
+.line{
+    position:relative;
+    padding: 4px;
+}
+
+.timeline{
+position: absolute;
+   width: 3px;
+   height: 125px;
+   background: #2f2a24;
+   top: -65px;
+   left:20px;
+}
+
+.year{
+    min-width: 60px;
+    height: fit-content;
+    background: #f1eadf;
+    color: #342d26;
+    font-size: 15px;
+    text-align: center;
+    border: 2px solid #e2d5be;
+    position: relative;
+    padding:  7px 8px;
+}
+.experience-content h3{
+    font-size: 25px;
+    margin-bottom: 8px;
+    color: #40372e;
+}
+.experience-content p{
+    line-height: 1.8;
+    color: #40372e;
+    font-size: 15px;
+}
+
+.content-section{
+     padding: 40px 60px 10px;
+}
+
+.row{
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: 500px 500px;
+    gap:14px;
+}
+
+.contact,
+.location{
+    background: #f1eadf;
+    color: #2f2a24;
+    text-align: center;
+    padding: 12px;
+    font-size: 13px;
+    border: 1px solid #2f2a24;
+    margin-left: 310px;
+    height: 100px;
+    width: 280px;
+}
+
+.location{
+    width: fit-content;
+    margin: 14px;
+    padding: 20px 20px;
+    margin-left: 123%;
+}
+
+.linkdin-box{
+    font-size: 24px;
+    text-align: justify;
+    align-items: center;
+     gap: 14px;
+     margin-left: 42%;
+}
+
+.linkdin-box p{
+    font-size: 24px;
+    color: #2f2a24;
+    margin-bottom: 10px;
+}
+
+.linkdin-box p{
+    font-size: 24px;
+    color: #2f2a24;
+    margin-bottom: 10px;
+    background: #eadfcb;
+    text-decoration: none;
+
+}
+
+.footer{
+    text-align: center;
+    padding: 18px;
+    color: #c49a49;
+    background: #fbf7ef;
+}
+.para{
+    color: #2f2a24;
+    font-size: 14px;
+    background-color: #af8f58;
+    text-align: center;
+    margin-left: -72%;
+}
