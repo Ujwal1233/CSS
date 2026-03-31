@@ -1,0 +1,6 @@
+DeviceType             Max Width       Description
+
+Mobile                  600px          For smartphones and small screen 
+Tablet                  768px          For tablets and medium sized devices
+Small Laptops           1024px         For small laptops for large notebooks 
+Large Screen            1200px         For large desktop monitors
